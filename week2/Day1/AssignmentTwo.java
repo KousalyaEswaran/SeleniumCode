@@ -17,7 +17,7 @@ public class AssignmentTwo {
 		driver.findElementById("email").sendKeys("kousalyaeee@gmail.com");
 		System.out.println("Email Entered");
 		
-		driver.findElementByXPath("//input[@value='Append ']").sendKeys("Done");
+		driver.findElementByXPath("//input[@value='Append ']").sendKeys("Done" , Keys.TAB);
 		System.out.println("Append Done");
 		
 		String text = driver.findElementByName("username").getAttribute("value");
