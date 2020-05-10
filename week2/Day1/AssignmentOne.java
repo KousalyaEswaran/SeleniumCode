@@ -44,8 +44,8 @@ public class AssignmentOne {
 
 		driver.findElementByClassName("smallSubmit").click();
 		
-		System.out.println("Title: " + driver.findElementById("sectionHeaderTitle_leads").getText());
-//		driver.close();
+		System.out.println("Title: " + driver.getTitle());
+		driver.close();
 
 	}
 
