@@ -7,7 +7,8 @@ import org.openqa.selenium.support.ui.Select;
 public class AssignmentOne {
 
 	public static void main(String[] args) {
-
+		
+		System.setProperty("webdriver.chrome.silentOutput", "true");
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://leaftaps.com/opentaps/control/main");
@@ -41,6 +42,9 @@ public class AssignmentOne {
 		WebElement country = driver.findElementById("createLeadForm_generalCountryGeoId");
 		Select c = new Select(country);
 		c.selectByVisibleText("India");
+		
+		driver.findElementById("createLeadForm_primaryPhoneNumber").sendKeys("9934567823");
+		driver.findElementById("createLeadForm_primaryEmail").sendKeys("kousalya@gmail.com");
 
 		driver.findElementByClassName("smallSubmit").click();
 		
